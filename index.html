@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script type="text/javascript" src="main.js"> </script>
+<title>Wissam Merhi | My Bio</title>
+
+<header>
+	<h1 style="letter-spacing: 2px; text-align: center; color: white; margin-top: 10px">Wissam Merhi</h1>
+</header>
+
+
+<style type="text/css">
+	
+	
+    body{
+    	background-color: black;
+    }
+
+	h3{
+		color: white;
+		text-align:center;
+	}
+
+	h4{
+		text-align: left;
+		color: white;
+		font-weight: bold;
+	}
+
+	h5{
+		text-align: center;
+		color: white;
+		margin-top: 80px;
+	}
+
+	.previous{
+		float: left;
+		margin-left: 600px;
+		background-color: white;
+		border-radius: 100%;
+		width: 1.65%;
+	    text-align: center
+	}
+
+	.next{
+		float: right;
+		margin-right: 600px;
+		background-color: white;
+		border-radius: 100%;
+		width: 1.65%;
+		text-align: center
+	}
+
+	div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    margin-right: 130px;
+	}
+
+	div.gallery:hover {
+	    border: 1px solid #777;
+	}
+
+	div.gallery img {
+	    width: 100%;
+	    height: 150px;
+	}
+
+	div.desc {
+	    padding: 15px;
+	    text-align: center;
+	    font-size: 14.15px;
+	    color: white;
+	}
+
+
+</style>
+<body>
+<h5>I am currently studying computer science at the Lebanese American University, and learning more about HTML, CSS, and JavaScript in my free time.</h5><br><br><br>
+
+<h4 style="text-align: center;">Gallery</h4><br>
+<img name="slide" width="400" height="400" style="display: block; margin-right: auto; margin-left: auto;" />
+<script type="text/javascript">
+	var i = 0; 			
+	var images = [];	
+	var time = 5000;	
+		 
+	images[0] = "Images/Coding and Robotics Sunday Jbeil 1.jpg";
+	images[1] = "Images/Robotics Day 2017 RHU.jpg";
+	images[2] = "Images/download.jpg";
+	images[3] = "Images/Some random asshole.jpg";
+	images[4] = "Images/astrology is pseudoscience.jpg";
+	images[5] = "Images/astrology is pseudoscience 2.jpg";
+
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+		  i++; 
+		} else { 
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload=changeImg;
+</script>
+
+
+<h3 style="margin-top: 100px;">Contact Me</h3>
+
+<form>
+  <div class="form-group" id="contactForm" >
+    <label>Email</label>
+    <input type="Email" class="form-control" id="email1" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <label>Your Message</label>
+    <input type="Message" class="form-control" id="message1" placeholder="Message" required>
+  </div>
+  <div style="align-self: center; text-align: center;">
+  	<input type="submit" value="Submit" id="submit">
+  </div>
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	var num = 0;
+	var backimage = [];
+	var backimg = '';
+	backimage[0] = '';
+	backimage[1] = '';
+	backimage[2] = '';
+	var name = ['Student', 'Developer', 'Nerd'];
+
+	function func1(){
+		if (num >= 0 && num < 2) {
+			num = num + 1;
+		} else {
+			num = 0;
+		}
+	}
+
+	function func2(){
+		if (num > 0 && num <= 2) {
+			num = num - 1;
+		} else {
+			num = 2;
+		}
+	}
+
+	function topName(){
+		document.getElementById('top').value = name[num];	
+	}
+
+	console.log(num);
+
+</script>
+
+<head>
+    <a href="#" class="previous" id="prevButton" onclick="func2()";>&#8249;</a>
+	<a href="#" class="next" id="nextButton" onclick="func1()";>&#8250;</a>
+	<h3 style="margin-top: 30px;" id="top"> </h3>
+</head>
